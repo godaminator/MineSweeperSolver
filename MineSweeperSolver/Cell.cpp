@@ -5,6 +5,9 @@ Cell::Cell(int x,int y) {
 	
 	Pos* p = new Pos(x, y);
 	setPos(p);
+	currentStatus= Status::COVERED;
+	neighbourMines = 9;
+
 
 }
 Pos Cell::getPos() {

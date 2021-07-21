@@ -1,5 +1,5 @@
 #pragma once
-enum Status
+enum class Status
 {
 	COVERED,
 	UNCOVERED,

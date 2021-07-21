@@ -7,9 +7,10 @@ class ManualInput :
 public:
     ManualInput(int,int);
     int getHeight();
-    int getColumn();
+    int getWidth();
     void buildGrid();
     void updateGrid();
+    Cell& getCell(int, int);
 
 private:
     std::vector<std::vector<Cell*>> grid;
