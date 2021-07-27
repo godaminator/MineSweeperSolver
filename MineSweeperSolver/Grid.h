@@ -14,7 +14,7 @@ class Grid
 		virtual void buildGrid()=0;
 		virtual void updateGrid()=0;
 		virtual Cell& getCell(int,int)=0;
-		std::vector<Cell*> getNeighbours(Cell);
+		std::vector<Cell*> getNeighbours(Cell&);
 		
 };
 

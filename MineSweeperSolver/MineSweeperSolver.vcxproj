@@ -123,16 +123,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BranchAndBound.h" />
     <ClInclude Include="Cell.h" />
+    <ClInclude Include="ConsoleOutput.h" />
     <ClInclude Include="Grid.h" />
     <ClInclude Include="ManualInput.h" />
+    <ClInclude Include="Output.h" />
     <ClInclude Include="Pos.h" />
+    <ClInclude Include="ProcessByProbablities.h" />
+    <ClInclude Include="ProcessEngine.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BranchAndBound.cpp" />
     <ClCompile Include="Cell.cpp" />
+    <ClCompile Include="ConsoleOutput.cpp" />
     <ClCompile Include="Grid.cpp" />
     <ClCompile Include="ManualInput.cpp" />
+    <ClCompile Include="Output.cpp" />
     <ClCompile Include="Pos.cpp" />
+    <ClCompile Include="ProcessByProbablities.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
