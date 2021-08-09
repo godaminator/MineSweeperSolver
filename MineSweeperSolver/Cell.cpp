@@ -1,6 +1,6 @@
 #include "Cell.h"
 #include "Pos.h"
-std::ostream& operator << (std::ostream& out, const Cell& c) {
+std::ostream& operator<< (std::ostream& out, const Cell& c) {
 	out <<"[" << c.position->getRow()+1 << "," << c.position->getColumn()+1<<"]";
 	return out;
 }

@@ -9,7 +9,7 @@ public:
     int getHeight();
     int getWidth();
     void buildGrid();
-    void updateGrid();
+    void updateGrid(std::vector<std::pair<Cell*, float>> );
     Cell& getCell(int, int);
 
 private:

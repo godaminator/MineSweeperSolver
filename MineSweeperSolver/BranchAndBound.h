@@ -42,6 +42,8 @@ private:
 
     vector<pair<Cell*, float>> consolidate_final_matrix();
 
+    void printgrid(Grid* mygrid1);
+
 
 };
 

@@ -73,7 +73,7 @@ void ManualInput::buildGrid() {
 
 }
 
-void ManualInput::updateGrid() {
+void ManualInput::updateGrid(std::vector<std::pair<Cell*, float>> p) {
 	for (int i = 0; i < getHeight(); i++) {
 		for (int j = 0; j < getWidth(); j++) {
 			std::cout <<"["

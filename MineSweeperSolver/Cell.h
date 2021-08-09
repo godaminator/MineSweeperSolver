@@ -13,7 +13,7 @@ public:
 	void setNeighbourMines(int);
 	bool operator==(const Cell& rhs) const;
 	bool operator!=(const Cell& rhs) const;
-	friend std::ostream& operator << (std::ostream& out, const Cell& c);
+	friend std::ostream& operator<< (std::ostream& out, const Cell& c);
 	bool operator<(const Cell& rhs) const;
 	int getRow();
 	int getCol();

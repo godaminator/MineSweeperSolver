@@ -15,8 +15,33 @@ void BranchAndBound::InitCstateVariables(Grid* grid)
 	unordered_set<Cell*> c_cells=identifyCoveredBoundaryCells(grid);
 	vector<Cell*> tuc_cells=identifyBoundaryCells(grid);
 	unordered_set<Cell*> uc_cells(tuc_cells.begin(), tuc_cells.end());
-	
+	//unordered_set<Cell*> c_cells;
+	//filterMines() /consider marked mines
+	for (Cell* i : uc_cells) {
+		cout << "x" << *i;
+		for (Cell* j : grid->getNeighbours(*i)) {
+			if (j->getStatus() == Status::MINE) {
+				cout << "+";
+				i->decMines();
+			}
+		}
+		cout << endl;
+	}
+		
+		
 
+	
+	printgrid(grid);
+	cout<<endl<<"covered cells" << endl;
+	for (auto i : c_cells) {
+		cout << *i << endl;
+	}
+	cout << endl <<"uncovered Cells" << endl;
+	for (auto i : uc_cells)
+	{
+		cout << *i << endl;
+	}
+	
 	//init covered cells
 	for (auto i:c_cells) {
 		Cstate_CoveredtoUncovered[i] = {};
@@ -261,4 +286,22 @@ vector<pair<Cell*, float>> BranchAndBound::consolidate_final_matrix()
 	
 	
 	return result;
+}
+
+
+void BranchAndBound::printgrid(Grid* mygrid1) {
+	cout << "xxxx";
+	for (int i = 0; i < mygrid1->getHeight(); i++) {
+		cout << endl;
+		for (int j = 0; j < mygrid1->getWidth(); j++) {
+			cout << int(mygrid1->getCell(i, j).getStatus());
+		}
+	}
+	cout << endl;
+	for (int i = 0; i < mygrid1->getHeight(); i++) {
+		cout << endl;
+		for (int j = 0; j < mygrid1->getWidth(); j++) {
+			cout << int(mygrid1->getCell(i, j).getNeighbourMines());
+		}
+	}
 }
