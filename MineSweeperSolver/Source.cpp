@@ -27,7 +27,12 @@ for (int i = 0; i < mygrid1->getHeight(); i++) {
 }
 }
 int main() {
-
+	int myheight,mywidth;
+	cout << "Enter the height of the grid:";
+	cin >> myheight;
+	cout << "\nEnter the width of the grid:";
+	cin >> mywidth;
+	cout.rdbuf(0);
 	//ManualInput mygrid=ManualInput(9, 9);
 	//GuiInput mygrid(9, 9);
 	//std::cout << "created inside main\n";
@@ -77,7 +82,7 @@ int main() {
 	//		}
 	//	}
 	//}
-	GuiInput mygrid(16, 30);
+	GuiInput mygrid(myheight, mywidth);
 	std::cout << "created inside main\n";
 	//checking virtual function
 	Grid* mygrid1 = &mygrid;
