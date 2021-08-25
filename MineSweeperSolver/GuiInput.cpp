@@ -1,17 +1,20 @@
 #include "GuiInput.h"
 
 
-GuiInput::GuiInput(int h, int w)
+GuiInput::GuiInput()
 {
-	CleanGUI GUIObj;
-	height = h;
-	width = w;
-
+	Cleangui_window GUIObj;
+	height = 10;
+	width = 10;
+	std::cout << "thread before"<<sizeof(height);
 	//setting up staus flags
 	gridstatusptrptr = &gridstatusptr;
 	gridptrptr = &gridptr;
 	flagptrptr = &flagptr;
-	t1= std::thread(&CleanGUI::startWidget, GUIObj, height, width, flagptrptr, gridstatusptrptr, gridptrptr);
+	height_bridge_variable_ptr_ptr = &height_bridge_variable_ptr;
+	width_bridge_variable_ptr_ptr = &width_bridge_variable_ptr;
+	t1= std::thread(&Cleangui_window::startWidget, GUIObj, height_bridge_variable_ptr_ptr, width_bridge_variable_ptr_ptr, flagptrptr, gridstatusptrptr, gridptrptr);
+	std::cout << "thread\n";
 	std::chrono::milliseconds timespan(5000);
 	std::this_thread::sleep_for(timespan);
 	std::cout << "created inside guiobj\n";
@@ -35,6 +38,20 @@ int GuiInput::getWidth()
 {
 	return width;
 }
+void GuiInput::changeGridSize(int h,int w) {
+	height = h;
+	width = w;
+	grid.clear();
+	for (int i = 0; i < height; i++) {
+		grid.push_back({});
+		for (int j = 0; j < width; j++) {
+
+			grid[i].push_back(new Cell(i, j));
+		}
+	}
+
+
+}
 
 void GuiInput::buildGrid()
 {
@@ -48,7 +65,9 @@ void GuiInput::buildGrid()
 
 		if (**flagptrptr) {
 			mtx.lock();
-			
+			if (height!= *height_bridge_variable_ptr &&width!= *width_bridge_variable_ptr) {
+				changeGridSize(*height_bridge_variable_ptr, *width_bridge_variable_ptr);
+			}
 			for (int i = 0; i < getHeight(); i++) {
 				for (int j = 0; j < getWidth(); j++) {
 

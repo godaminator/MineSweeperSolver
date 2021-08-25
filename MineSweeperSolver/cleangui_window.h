@@ -1,14 +1,14 @@
 #pragma once
-#ifndef CLEANGUI_H
-#define CLEANGUI_H
+#ifndef CLEANGUI_WINDOW_H
+#define CLEANGUI_WINDOW_H
 #include <vector>
 
 
-class CleanGUI
+class Cleangui_window
 {
 public:
-    CleanGUI();
-    int startWidget(int h, int w, bool** externalflag, bool** gridflag, std::vector<std::vector<std::pair<int, int> >>** gridPointer);
+    Cleangui_window();
+    int startWidget(int **h, int **w, bool** externalflag, bool** gridflag, std::vector<std::vector<std::pair<int, int> >>** gridPointer);
     bool readflag();
     bool setflag();
     

@@ -1,6 +1,6 @@
 #pragma once
 #include "Grid.h"
-#include "CleanGUI.h"
+#include "cleangui_window.h"
 #include<thread>
 #include <mutex>
 #include <chrono>
@@ -8,9 +8,10 @@ class GuiInput :
     public Grid
 {
 public:
-	GuiInput(int,int);
+	GuiInput();
 	int getHeight();
 	int getWidth();
+	void changeGridSize(int h, int w);
 	void buildGrid();
 	void updateGrid(std::vector<std::pair<Cell*, float>>);
 	Cell& getCell(int, int);
@@ -21,6 +22,7 @@ private:
 	std::vector<std::vector<Cell*>> grid;
 	int height;
 	int width;
+	
 	//int interpreteFromGUI();
 
 
@@ -32,5 +34,12 @@ private:
 	bool* gridstatusptr;
 	std::vector<std::vector<std::pair<int, int>>>** gridptrptr;
 	std::vector<std::vector<std::pair<int, int>>>* gridptr;
+
+
+	int** height_bridge_variable_ptr_ptr;
+	int * height_bridge_variable_ptr;
+	int** width_bridge_variable_ptr_ptr;
+	int* width_bridge_variable_ptr;
+
 };
 

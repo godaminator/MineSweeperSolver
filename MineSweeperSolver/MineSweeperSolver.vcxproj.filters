@@ -45,7 +45,7 @@
     <ClInclude Include="GuiInput.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CleanGUI.h">
+    <ClInclude Include="cleangui_window.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GUIOutput.h">

@@ -80,9 +80,9 @@
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
-      <AdditionalLibraryDirectories>S:\Documents\build-cleanGUI-Desktop_Qt_6_1_2_MSVC2019_64bit-Release\release</AdditionalLibraryDirectories>
-      <AdditionalDependencies>cleanGUI.lib</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>S:\Documents\build-cleangui_window-Desktop_Qt_6_1_2_MSVC2019_64bit-Release\release</AdditionalLibraryDirectories>
+      <AdditionalDependencies>cleangui_window.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -95,9 +95,9 @@
       <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
-      <AdditionalLibraryDirectories>S:\Documents\build-cleanGUI-Desktop_Qt_6_1_2_MSVC2019_64bit-Release\release</AdditionalLibraryDirectories>
-      <AdditionalDependencies>cleanGUI.lib</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>S:\Documents\build-cleangui_window-Desktop_Qt_6_1_2_MSVC2019_64bit-Release\release</AdditionalLibraryDirectories>
+      <AdditionalDependencies>cleangui_window.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -110,11 +110,11 @@
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>S:\Documents\build-cleanGUI-Desktop_Qt_6_1_2_MSVC2019_64bit-Release\release</AdditionalLibraryDirectories>
-      <AdditionalDependencies>cleanGUI.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>S:\Documents\build-cleangui_window-Desktop_Qt_6_1_2_MSVC2019_64bit-Release\release</AdditionalLibraryDirectories>
+      <AdditionalDependencies>cleangui_window.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -127,11 +127,11 @@
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>S:\Documents\build-cleanGUI-Desktop_Qt_6_1_2_MSVC2019_64bit-Release\release</AdditionalLibraryDirectories>
-      <AdditionalDependencies>cleanGUI.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>S:\Documents\build-cleangui_window-Desktop_Qt_6_1_2_MSVC2019_64bit-Release\release</AdditionalLibraryDirectories>
+      <AdditionalDependencies>cleangui_window.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -140,7 +140,7 @@
     <ClInclude Include="ConsoleOutput.h" />
     <ClInclude Include="Grid.h" />
     <ClInclude Include="GuiInput.h" />
-    <ClInclude Include="CleanGUI.h" />
+    <ClInclude Include="cleangui_window.h" />
     <ClInclude Include="GUIOutput.h" />
     <ClInclude Include="ManualInput.h" />
     <ClInclude Include="Output.h" />
